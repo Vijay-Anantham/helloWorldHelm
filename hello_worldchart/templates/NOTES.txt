@@ -1,0 +1,5 @@
+Installing your first hello world program...
+
+README:
+1. It is assumed that you create a new namespace to install the helm chart
+2. the otel traces are sent using otlp-http

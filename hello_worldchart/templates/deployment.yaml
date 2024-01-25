@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rolldice
+spec:
+  selector:
+    matchLabels:
+      app: rolldice
+  template:
+    metadata:
+      labels:
+        app: rolldice
+    spec:
+      containers:
+      - name: rolldice
+        image: containers.cisco.com/vijaysek/rolldice:v3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: {{ .Values.collector.endpoint }}
