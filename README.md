@@ -30,4 +30,8 @@ A basic go api server made into a helm chart to be deployed in a cluster and has
 
 7. You can get the dice roll value by accessing
     - `http://localhost:8080/rolldice`
+
+## Application code
+- You can find the code for the application rolldice in the repo
+    - `https://github.com/Vijay-Anantham/roll-dice`
     
