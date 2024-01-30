@@ -2,6 +2,8 @@
 A basic go api server made into a helm chart to be deployed in a cluster and has few OpenTelemetry observability setup done.
 
 # installation
+- Its a best practice to make a new namespace for an application
+    - namespace can be created by running `kubectl create ns <namespace>`
 - helm repo add `<repo name>` https://vijay-anantham.github.io/helloWorldHelm/charts
 - helm install -n `<namespace>` `<release name>` `<repo name>`/hello_worldchart
 
