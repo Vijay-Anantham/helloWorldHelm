@@ -12,9 +12,6 @@ Huuary.. Chart installed successfully
 3. if no namespace was selected when installing the chart then,
     - Run 'kubectl get all -n <namespace>'
 
-4. if no namespace was selected when installing the chart then,
-    - Run 'kubectl get all'
-
 5. The following are should be found.
     - one pod in 'running' status
     - one deployment with name 'rolldice'
