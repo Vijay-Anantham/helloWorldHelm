@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: rolldice
-        image: containers.cisco.com/vijaysek/rolldice:v3
+        image: dockerdaemon0901/rolldice:v1
         resources:
           limits:
             memory: "128Mi"
