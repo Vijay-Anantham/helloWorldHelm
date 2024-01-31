@@ -11,7 +11,7 @@ customconfig:
   name: ""
   
 config:
-  name: "roll-configmap.yaml"
+  name: "rolldice-config"
 image:
   repository: nginx
   pullPolicy: IfNotPresent

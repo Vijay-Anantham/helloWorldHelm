@@ -3,12 +3,12 @@ entries:
   hello_worldchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-31T18:05:17.855019+05:30"
+    created: "2024-01-31T20:24:19.81673+05:30"
     description: A Helm chart for Kubernetes
-    digest: e416ac2a154e373a18ef98c4888af43657b819630cd83b423409b93d9b0b902c
+    digest: 8dade2548453237e237ca08f99d05262b6c08f9ab5c1b1e3af4f7e145c466e3a
     name: hello_worldchart
     type: application
     urls:
     - hello_worldchart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-31T18:05:17.854628+05:30"
+generated: "2024-01-31T20:24:19.815372+05:30"

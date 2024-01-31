@@ -20,17 +20,11 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8080
-        env:
-        {{ if .Values.customconfig.enable }}  
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          valueFrom:
-            configMapKeyRef:
+        envFrom:
+        {{ if .Values.customconfig.enable }}
+          - configMapRef:
               name: {{ .Values.customconfig.name }}
-              key: OTEL_EXPORTER_OTLP_ENDPOINT
         {{ else }}
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          valueFrom:
-            configMapKeyRef:
+          - configMapRef:
               name: {{ .Values.config.name }}
-              key: OTEL_EXPORTER_OTLP_ENDPOINT
         {{ end }}

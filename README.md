@@ -20,7 +20,7 @@ A basic go api server made into a helm chart to be deployed in a cluster and has
 
     - to pass custom configmap set the `customconfig.enable` to true in the values file.
 
-    - pass the path to the custom config file into the `customconfig.name` variable.
+    - pass the name to the custom configmap into the `customconfig.name` variable.
 
 3. if no namespace was selected when installing the chart then,
     - Run 'kubectl get all -n `<namespace>`'
