@@ -9,8 +9,8 @@ Huuary.. Chart installed successfully
 2. the otel traces are sent using otlp-http
     - default: "http://jaeger-collector.opentelemetry.svc.cluster.local:4318"
 
-3. if no namespace was selected when installing the chart then,
-    - Run 'kubectl get all -n <namespace>'
+3. if namespace was selected when installing the chart then,
+    $ 'kubectl get all -n {{ .Release.Namespace }}'
 
 5. The following are should be found.
     - one pod in 'running' status
@@ -19,7 +19,7 @@ Huuary.. Chart installed successfully
 
 6. To run the application
     If installed in a nampspace
-        - Run 'kubectl port-forward -n <namespace> svc/rolldice 8080:8080'
+        - Run 'kubectl port-forward -n {{ .Release.Namespace }} svc/rolldice 8080:8080'
 
 7. You can get the dice roll value by accessing
     - 'http://localhost:8080/rolldice'
