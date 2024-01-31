@@ -2,6 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+replicaCount: 1
 # This section can be used to add custom config file with environment variables
 # Custom config map can be loaded by setting 'enable = true'
 # name is the path to the custom config file
@@ -9,7 +10,6 @@ customconfig:
   enable: false
   name: ""
   
-replicaCount: 1
 config:
   name: "roll-configmap.yaml"
 image:
