@@ -1,4 +1,4 @@
-Installing your first hello world program...
+Installing otel-demo
 
 
 Huuary.. Chart installed successfully
@@ -24,3 +24,5 @@ Huuary.. Chart installed successfully
 7. You can get the dice roll value by accessing
     - 'http://localhost:8080/rolldice'
     
+- You can find the code for the application rolldice in the repo
+    - `https://github.com/Vijay-Anantham/roll-dice`
