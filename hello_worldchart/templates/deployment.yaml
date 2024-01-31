@@ -21,5 +21,16 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        {{ if .Values.customconfig.enable }}  
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          value: {{ .Values.collector.endpoint }}
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Values.customconfig.name }}
+              key: OTEL_EXPORTER_OTLP_ENDPOINT
+        {{ else }}
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Values.config.name }}
+              key: OTEL_EXPORTER_OTLP_ENDPOINT
+        {{ end }}
